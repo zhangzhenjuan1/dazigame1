@@ -1,0 +1,128 @@
+body{
+	width:100%;
+	height:650px;
+	margin:0;
+	padding:0;
+	/*background: #2D2D2D;*/
+	color:white;
+	font-family: aa;
+	font-size: 30px;
+	background:url(./img/c.jpg);
+	background-size: 1366px auto;
+	overflow: hidden;
+}
+@font-face { 
+  font-family: aa;       /*这里是说明调用来的字体名字*/ 
+  src: url('BALLOONS.TTF');   /*这里是字体文件路径*/ 
+  font-size: 50px;
+}
+@font-face {
+	font-family: aa1;       /*这里是说明调用来的字体名字*/
+	src: url('FZJZFW.TTF');   /*这里是字体文件路径*/
+	font-size: 50px;
+}
+@keyframes an1{
+	0%{margin-left: 0;
+		/*margin-top:20px;*/
+	}
+	100%{margin-left:48%}
+} 
+@keyframes an2{
+	0%{margin-right: 0;
+		/*margin-top:20px;*/
+	}
+	100%{margin-left:0}
+}
+@keyframes an3{
+	0%{
+		transform:scale(1,1) ;
+	}
+	100%{
+		transform: scale(1.2,1.2);
+	}
+
+}
+
+.title{
+	animation:an3 0.5s linear 4 alternate 2s,an1 1s linear 1;
+	transition: all linear 0.5s;
+	font-family: aa1;
+	/*animation:an1 1s linear 1;*/
+	/*transition:all linear 1s;*/
+	width:390px;height:200px;font-size:80px;text-align: center;margin:100px auto;}
+.clear{clear: both}
+.panel{
+	width:80%;
+	margin-left: 10%;
+	height:60px;
+	position:absolute;
+	top:550px;
+	/*background: black;*/
+	color:white;
+	font-family: 微软雅黑;
+}
+.panel .die,.panel .sore,.panel .replay,.panel .pause,.panel .begin{
+	border-radius: 5px;
+	box-shadow: 0 0 10px #ccc;
+	text-align: center;
+	margin-right:50px;
+	color: #f75e44;
+	float: left;
+	line-height: 40px;
+	padding:5px 20px;
+	background:rgba(255,255,255,0.7);
+	width:100px;
+}
+.panel .die{
+	margin-left: 18%;
+}
+
+.begin,.pause,.replay{
+	cursor: pointer;
+}
+.begin{
+	transition:all linear 0.5s;
+
+}
+.begin:hover,.replay:hover{
+	/*animation:an3 1s linear infinite;*/
+	transition:all linear 0.5s;
+	transform: scale(1.2,1.2);
+	animation: an3 0.5s linear 10 alternate 2s;
+
+}
+.replay:hover{
+
+}
+.clear{clear:both}
+
+.guanka{
+	/*width:500px;*/
+	/*height:300px;*/
+	margin-top: -50px;
+	background:#222222;
+	/*border:1px solid #ccc;*/
+	box-shadow: 10px 0 10px #ccc;
+	text-align: center;
+	line-height: 40px;
+	padding: 120px;
+	display: none;
+	transition:all linear 1s;
+}
+.over{
+	margin-top: -400px;
+	background:rgba(34,34,34,0.7);
+	/*border:1px solid #ccc;*/
+	box-shadow: 10px 0 10px #ccc;
+	text-align: center;
+	line-height: 40px;
+	padding: 310px;
+	font-size: 60px;
+	transition:all linear 1s;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	position: relative;
+	z-index:200;
+	animation: an3 0.5s linear 10 alternate 1s;
+	display:none;
+
+}
