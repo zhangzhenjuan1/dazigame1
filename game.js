@@ -28,9 +28,7 @@ window.onload= function () {
             this.move();
             this.key();
         },
-        pause:function(){
-            this.move=none;
-        },
+       
         key:function(){
             var that=this;
             document.onkeydown=function(e){
@@ -60,24 +58,28 @@ window.onload= function () {
         },
 
         next:function(){
+            
             clearInterval(this.t);
-            for(var i=0;i<this.spans.length;i++){
-                this.span[i].style.webkitTransform="scale(1.1,1.1)";
-                this.span[i].style.webkitTransition="all linear 0.3s";
-                document.body.removeChild(this.spans[i]);
+            var that=this;
+            for(var i=0;i<that.spans.length;i++){
+                that.spans[i].style.webkitTransform="scale(1.1,1.1)";
+                that.spans[i].style.webkitTransition="all linear 0.3s";
+                document.body.removeChild(that.spans[i]);
             }
-            this.spans=[];
+            that.spans=[];
             //this.currArr=[];
             //this.currPosArr=[];
-            this.speed++;
-            this.letterLen++;
+            that.speed++;
+            that.letterLen++;
 
-            this.currSore=0;
-            this.num+=10;
+            that.currSore=0;
+            that.num+=10;
 
-            this.play();
-            this.die=10;
-            this.sore=0;
+            
+            // this.move();
+            that.die=10;
+            that.sore=0;
+            that.play();
         },
 
         move:function(){
